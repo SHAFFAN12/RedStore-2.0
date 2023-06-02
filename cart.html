@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://kit.fontawesome.com/8b00f4755d.js" crossorigin="anonymous"></script>
+</head>
+<body class="body">
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="logo"><a href="index.html"><span>Red</span>Store</a></div>
+                <ul id="sidemenu">
+                    <li class="item"><a href="index.html">Home</a></li>
+                    <li class="item"><a href="#featuredproduct">Featured Product</a></li>
+                    <li class="item"><a href="#ourproducts">Our Products</a></li>
+                    <li class="item"><a href="#">Quick Links</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <div class="cart"><span><a href="#">Cart :</span></a><span id="cart">0</span></div>
+            </nav>
+            <i class="fa-solid fa-caret-down" onclick="openmenu()"></i>
+        </div>
+        <div class="background" id="background">
+            <div class="logo1"><span>Red</span>Store</div>
+            <button class="cross" onclick="loghide()">x</i></button>
+            <div class="container1" id="container1">
+                <h1>Login</h1>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email" onblur="addEmail()">
+                <input type="password" name="password" id="pass" placeholder="Enter Your password"/>
+                <button id="show">Show Password</button>
+                <button type="submit" onclick="submit()">Continue</button>
+                <span>or Connect with Social Media</span>
+                <button type="submit" id="face"><i class="fa-brands fa-facebook-f"></i>Sign up </button>
+                <button type="submit" id="google"><i class="fa-brands fa-google"></i>Sign in with Google</button>
+            </div>
+        </div>
+
+    </header>
+    
+    <section>
+        <div class="container intro">
+            <!-- <div class="products">Item no.</div> -->
+            <div class="products">Product Name</div>
+            <div class="products">Price</div>
+            <div class="products">Quantity</div>
+            <div class="products">SubTotal</div>
+            <div class="products">Remove</div>
+        </div>
+       
+
+    </section>
+    <div class="btn" style="background-color: black; color: white;" onclick="showlogin()">CHECKOUT</div>
+
+    <script src="cart.js"></script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
